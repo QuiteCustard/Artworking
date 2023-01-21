@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: "meno-banner", serif;
+    text-transform: capitalize;
+}
+
+h1 {
+    font-size: clamp(32px, 4vw, 45px);
+    color: white;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+p {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 400;
+}
+
+button {
+    font-family: "futura-pt", sans-serif;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.all-caps {
+    text-transform: uppercase;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 500;
+}
+
+.sub-heading {
+    color: white;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
