@@ -1,3 +1,7 @@
+:root {
+    --primary: #002a5c;
+}
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -36,6 +40,11 @@ header {
         width: 100%;
         grid-column: 1 / -1;
     }
+
+    .mini-container {
+        max-width: 825px;
+        margin: 0 auto;
+    }
 }
 
 #hero {
@@ -65,41 +74,23 @@ header {
     }
 }
 
-.menu-toggle {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    height: 35px;
-    border: 0;
-    background-color: unset;
-    color: white;
+#first {
+    padding-top: 120px;
 
-    span {
-        width: 25px;
-        height: 2px;
-        background-color: #ffffff;
-        display: block;
-        position: relative;
+    h2 {
+        margin-bottom: 60px;
+    }
 
-        &::before,
-        &::after {
-            position: relative;
-            content: "";
-            height: inherit;
-            width: 100%;
-            background-color: inherit;
-            display: inherit;
-            transition: transform 300ms, top 300ms;
-        }
+    h2, .supporting-paragraph {
+        text-align: center;
+    }
 
-        &::before {
-            top: -8px;
-        }
-
-        &::after {
-            top: 6px;
-        }
+    .booking-enquires {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
 }
 
 @import '_typography';
+@import '_utilities';

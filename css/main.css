@@ -1,3 +1,7 @@
+:root {
+  --primary: #002a5c;
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -34,6 +38,10 @@ header .inner {
   width: 100%;
   grid-column: 1/-1;
 }
+.container .mini-container {
+  max-width: 825px;
+  margin: 0 auto;
+}
 
 #hero {
   height: 100vh;
@@ -59,6 +67,92 @@ header .inner {
   font-size: 17px;
 }
 
+#first {
+  padding-top: 120px;
+}
+#first h2 {
+  margin-bottom: 60px;
+}
+#first h2, #first .supporting-paragraph {
+  text-align: center;
+}
+#first .booking-enquires {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "meno-banner", serif;
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: clamp(32px, 4vw, 45px);
+  color: white;
+}
+
+h2 {
+  font-size: 40px;
+  color: var(--primary);
+}
+
+h3 {
+  font-size: 32px;
+  color: var(--primary);
+}
+
+p, label {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #666666;
+}
+p.supporting-paragraph, label.supporting-paragraph {
+  font-size: 22px;
+  color: var(--primary);
+}
+
+.all-caps {
+  text-transform: uppercase;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+}
+
+.sub-heading {
+  color: white;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: "futura-pt", sans-serif;
+  cursor: pointer;
+  font-size: 17px;
+  border: 0;
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+button.rounded {
+  border-radius: 100%;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+img.logo {
+  max-width: 92px;
+  max-height: 140px;
+}
+
 .menu-toggle {
   display: flex;
   align-items: center;
@@ -66,7 +160,7 @@ header .inner {
   height: 35px;
   border: 0;
   background-color: unset;
-  color: white;
+  font-size: 19px;
 }
 .menu-toggle span {
   width: 25px;
@@ -91,48 +185,42 @@ header .inner {
   top: 6px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "meno-banner", serif;
-  text-transform: capitalize;
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+  margin-top: 147px;
+  margin-bottom: 136px;
+}
+.split div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.split div button {
+  margin-top: 11px;
+}
+@media (width >= 1600px) {
+  .split {
+    gap: 128px;
+  }
+  .split img {
+    flex-basis: 795px;
+  }
+  .split div {
+    flex-basis: 400px;
+  }
 }
 
-h1 {
-  font-size: clamp(32px, 4vw, 45px);
-  color: white;
+label {
+  display: flex;
+  flex-direction: column;
 }
-
-h2 {
-  font-size: 40px;
-}
-
-h3 {
-  font-size: 32px;
-}
-
-p {
-  font-family: "proxima-nova", sans-serif;
-  font-weight: 400;
-}
-
-button {
-  font-family: "futura-pt", sans-serif;
-  font-size: 19px;
-  cursor: pointer;
-}
-
-.all-caps {
-  text-transform: uppercase;
-  font-family: "futura-pt", sans-serif;
-  font-weight: 500;
-}
-
-.sub-heading {
-  color: white;
-  font-size: 20px;
-}
-
-a {
-  text-decoration: none;
+label input {
+  width: 100%;
+  padding: 12px;
 }
 
 /*# sourceMappingURL=main.css.map */

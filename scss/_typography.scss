@@ -10,21 +10,24 @@ h1 {
 
 h2 {
     font-size: 40px;
+    color: var(--primary);
 }
 
 h3 {
     font-size: 32px;
+    color: var(--primary);
 }
 
-p {
+p, label {
     font-family: "proxima-nova", sans-serif;
     font-weight: 400;
-}
+    font-size: 17px;
+    color: #666666;
 
-button {
-    font-family: "futura-pt", sans-serif;
-    font-size: 19px;
-    cursor: pointer;
+    &.supporting-paragraph {
+        font-size: 22px;
+        color: var(--primary);
+    }
 }
 
 .all-caps {
