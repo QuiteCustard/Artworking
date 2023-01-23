@@ -41,9 +41,9 @@ header .inner .img-wrapper::before {
   width: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(112deg, rgb(0, 42, 92) 0%, rgba(255, 255, 255, 0) 100%);
+  background: rgba(0, 42, 92, 0.7);
   filter: blur(23px);
-  transform: scale(3);
+  transform: scale(2);
 }
 
 .container {
