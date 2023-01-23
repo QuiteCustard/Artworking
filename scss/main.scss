@@ -35,6 +35,13 @@ header {
         .img-wrapper {
             position: relative;
 
+            &.intersecting {
+                .logo {
+                    width: 62px;
+                    height: 93px;
+                }
+            }
+
             &::before {
                 position: absolute;
                 content: "";

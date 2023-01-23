@@ -25,6 +25,7 @@ img {
     object-fit: cover;
 
     &.logo {
+        transition: 300ms height, 300ms width;
         height: clamp(93px, 13vw, 140px);
         width: clamp(62px, 13vw, 92px);
         object-fit: contain;

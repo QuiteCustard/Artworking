@@ -34,6 +34,10 @@ header .inner .menu-toggle {
 header .inner .img-wrapper {
   position: relative;
 }
+header .inner .img-wrapper.intersecting .logo {
+  width: 62px;
+  height: 93px;
+}
 header .inner .img-wrapper::before {
   position: absolute;
   content: "";
@@ -180,6 +184,7 @@ img {
   object-fit: cover;
 }
 img.logo {
+  transition: 300ms height, 300ms width;
   height: clamp(93px, 13vw, 140px);
   width: clamp(62px, 13vw, 92px);
   object-fit: contain;
