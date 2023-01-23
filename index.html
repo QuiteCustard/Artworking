@@ -49,15 +49,15 @@
             <div class="mini-container booking-enquires">
                 <h3>Booking Enquiries 32px</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse odio elit, elementum et rutrum sit amet, finibus vitae urna. Vestibulum rutrum sapien ullamcorper ex sagittis.</p>
-                <form id="booking-form">
+                <form id="booking-form" action="" method="post">
                     <label>Name*
                         <input type="text" id="name" required>
                     </label>
                     <label>Email*
                         <input type="email" id="email" required>
                     </label>
-                    <label>Telephone*
-                        <input type="tel" id="phone" required>
+                    <label>Telephone* (xxx-xxxx-xxxx)
+                        <input type="tel" id="phone" minlength="9" maxlength="14" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
                     </label>
                     <button type="submit" class="rounded">Submit form</button>
                 </form>
