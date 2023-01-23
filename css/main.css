@@ -166,9 +166,13 @@ button {
   border-radius: 3px;
   font-weight: 300;
   text-transform: uppercase;
+  transition: background-color 300ms;
 }
 button.rounded {
   border-radius: 22px;
+}
+button:not(.menu-toggle):focus, button:not(.menu-toggle):hover {
+  background-color: #064591;
 }
 
 img {
@@ -191,6 +195,18 @@ img.logo {
   color: white;
   font-size: 19px;
   padding: 0;
+  transition: color 300ms;
+}
+.menu-toggle.open span {
+  background-color: transparent;
+}
+.menu-toggle.open span::before {
+  top: 0px;
+  transform: rotateZ(225deg);
+}
+.menu-toggle.open span::after {
+  top: -2px;
+  transform: rotateZ(135deg);
 }
 .menu-toggle span {
   width: 25px;
@@ -204,7 +220,7 @@ img.logo {
   content: "";
   height: inherit;
   width: 100%;
-  background-color: inherit;
+  background-color: #ffffff;
   display: inherit;
   transition: transform 300ms, top 300ms;
 }
