@@ -20,10 +20,29 @@ header {
   top: 0;
   width: 100%;
   padding-top: 60px;
+  background: linear-gradient(180deg, rgb(67, 78, 119) 0%, rgba(255, 255, 255, 0) 100%);
 }
 header .inner {
   display: flex;
   justify-content: space-between;
+}
+header .inner .img-wrapper .logo, header .inner .menu-toggle {
+  position: relative;
+  z-index: 1;
+}
+header .inner .img-wrapper {
+  position: relative;
+}
+header .inner .img-wrapper::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(112deg, rgb(0, 42, 92) 0%, rgba(255, 255, 255, 0) 100%);
+  filter: blur(23px);
+  transform: scale(3);
 }
 
 .container {
@@ -73,13 +92,20 @@ header .inner {
 #first h2 {
   margin-bottom: 60px;
 }
-#first h2, #first .supporting-paragraph {
+#first h2,
+#first .supporting-paragraph {
   text-align: center;
 }
 #first .booking-enquires {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+footer {
+  margin-top: 354px;
+  padding: 0 2rem;
+  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -134,14 +160,14 @@ button {
   font-size: 17px;
   border: 0;
   background-color: var(--primary);
-  color: white;
-  padding: 1rem 2rem;
+  color: #d8d0c7;
+  padding: 0.7rem 2.7rem;
   border-radius: 3px;
   font-weight: 300;
   text-transform: uppercase;
 }
 button.rounded {
-  border-radius: 100%;
+  border-radius: 22px;
 }
 
 img {
@@ -160,6 +186,7 @@ img.logo {
   height: 35px;
   border: 0;
   background-color: unset;
+  color: white;
   font-size: 19px;
 }
 .menu-toggle span {
@@ -214,13 +241,23 @@ img.logo {
   }
 }
 
+#booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
 label {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 label input {
   width: 100%;
   padding: 12px;
+  background-color: #efece7;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
 }
 
 /*# sourceMappingURL=main.css.map */

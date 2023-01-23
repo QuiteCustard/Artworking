@@ -20,10 +20,32 @@ header {
     top: 0;
     width: 100%;
     padding-top: 60px;
+    background: linear-gradient(180deg, rgb(67, 78, 119) 0%, rgba(255, 255, 255, 0) 100%);
 
     .inner {
         display: flex;
         justify-content: space-between;
+
+        .img-wrapper .logo, .menu-toggle {
+            position: relative;
+            z-index: 1;
+        }
+
+        .img-wrapper {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                background: linear-gradient(112deg, rgb(0, 42, 92) 0%, rgba(255, 255, 255, 0) 100%);
+                filter: blur(23px);
+                transform: scale(3);
+            }
+        }
     }
 }
 
@@ -81,7 +103,8 @@ header {
         margin-bottom: 60px;
     }
 
-    h2, .supporting-paragraph {
+    h2,
+    .supporting-paragraph {
         text-align: center;
     }
 
@@ -90,6 +113,12 @@ header {
         flex-direction: column;
         gap: 2rem;
     }
+}
+
+footer {
+    margin-top: 354px;
+    padding: 0 2rem;
+    text-align: center;
 }
 
 @import '_typography';

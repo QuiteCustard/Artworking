@@ -4,14 +4,14 @@ button {
     font-size: 17px;
     border: 0;
     background-color: var(--primary);
-    color: white;
-    padding: 1rem 2rem;
+    color: #d8d0c7;
+    padding: 0.7rem 2.7rem;
     border-radius: 3px;
     font-weight: 300;
     text-transform: uppercase;
 
     &.rounded {
-        border-radius: 100%;
+        border-radius: 22px;
     }
 }
 
@@ -32,6 +32,7 @@ img {
     height: 35px;
     border: 0;
     background-color: unset;
+    color: white;
     font-size: 19px;
 
     span {
@@ -87,19 +88,29 @@ img {
         img {
             flex-basis: 795px;
         }
-        
+
         div {
             flex-basis: 400px;
         }
     }
 }
 
+#booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
 label {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 
     input {
         width: 100%;
         padding: 12px;
+        background-color: #efece7;
+        border: 1px solid #cccccc;
+        border-radius: 3px;
     }
 }

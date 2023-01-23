@@ -14,7 +14,9 @@
 <body>
     <header class="container">
         <div class="inner">
-            <img class="logo" src="/assets/images/logo.svg" height="140" width="92" alt="Site logo">
+            <div class="img-wrapper">
+                <img class="logo" src="/assets/images/logo.svg" height="140" width="92" alt="Site logo">
+            </div>
             <button class="menu-toggle all-caps">Menu<span></span></button>
         </div>
     </header>
@@ -48,11 +50,21 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse odio elit, elementum et rutrum sit amet, finibus vitae urna. Vestibulum rutrum sapien ullamcorper ex sagittis.</p>
                 <form id="booking-form">
                     <label>Name*
-                        <input type="text">
+                        <input type="text" id="name" required>
                     </label>
+                    <label>Email*
+                        <input type="email" id="email" required>
+                    </label>
+                    <label>Telephone*
+                        <input type="tel" id="phone" required>
+                    </label>
+                    <button type="submit" class="rounded">Submit form</button>
                 </form>
             </div>
         </section>
     </main>
+    <footer>
+        <p>Artworking front end development task by Sam Edwards</p>
+    </footer>
 </body>
 </html>
