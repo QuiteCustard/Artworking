@@ -26,7 +26,8 @@ header {
         display: flex;
         justify-content: space-between;
 
-        .img-wrapper .logo, .menu-toggle {
+        .img-wrapper .logo,
+        .menu-toggle {
             position: relative;
             z-index: 1;
         }

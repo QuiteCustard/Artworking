@@ -26,7 +26,8 @@ header .inner {
   display: flex;
   justify-content: space-between;
 }
-header .inner .img-wrapper .logo, header .inner .menu-toggle {
+header .inner .img-wrapper .logo,
+header .inner .menu-toggle {
   position: relative;
   z-index: 1;
 }
@@ -175,8 +176,9 @@ img {
   object-fit: cover;
 }
 img.logo {
-  max-width: 92px;
-  max-height: 140px;
+  height: clamp(93px, 13vw, 140px);
+  width: clamp(62px, 13vw, 92px);
+  object-fit: contain;
 }
 
 .menu-toggle {
@@ -188,6 +190,7 @@ img.logo {
   background-color: unset;
   color: white;
   font-size: 19px;
+  padding: 0;
 }
 .menu-toggle span {
   width: 25px;

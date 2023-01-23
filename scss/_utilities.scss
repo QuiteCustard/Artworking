@@ -20,8 +20,9 @@ img {
     object-fit: cover;
 
     &.logo {
-        max-width: 92px;
-        max-height: 140px;
+        height: clamp(93px, 13vw, 140px);
+        width: clamp(62px, 13vw, 92px);
+        object-fit: contain;
     }
 }
 
@@ -34,6 +35,7 @@ img {
     background-color: unset;
     color: white;
     font-size: 19px;
+    padding: 0;
 
     span {
         width: 25px;
