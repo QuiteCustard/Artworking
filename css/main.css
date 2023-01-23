@@ -69,7 +69,7 @@ header .inner .img-wrapper::before {
 
 #hero {
   height: 100vh;
-  background-image: url(/assets/images/hero.jpg);
+  background-image: url(/assets/images/hero.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -213,12 +213,16 @@ img.logo {
   top: -2px;
   transform: rotateZ(135deg);
 }
+.menu-toggle.open:hover span, .menu-toggle.open:focus span {
+  background-color: transparent;
+}
 .menu-toggle span {
   width: 25px;
   height: 2px;
   background-color: #ffffff;
   display: block;
   position: relative;
+  transition: background-color 300ms;
 }
 .menu-toggle span::before, .menu-toggle span::after {
   position: relative;
@@ -227,13 +231,23 @@ img.logo {
   width: 100%;
   background-color: #ffffff;
   display: inherit;
-  transition: transform 300ms, top 300ms;
+  transition: transform 300ms, top 300ms, background-color 300ms;
 }
 .menu-toggle span::before {
   top: -8px;
 }
 .menu-toggle span::after {
   top: 6px;
+}
+.menu-toggle:hover, .menu-toggle:focus {
+  color: rgb(197, 196, 196);
+}
+.menu-toggle:hover span,
+.menu-toggle:hover span::before,
+.menu-toggle:hover span::after, .menu-toggle:focus span,
+.menu-toggle:focus span::before,
+.menu-toggle:focus span::after {
+  background-color: rgb(197, 196, 196);
 }
 
 .split {

@@ -15,7 +15,8 @@ button {
         border-radius: 22px;
     }
 
-    &:not(.menu-toggle):focus, &:not(.menu-toggle):hover {
+    &:not(.menu-toggle):focus,
+    &:not(.menu-toggle):hover {
         background-color: #064591;
     }
 }
@@ -45,20 +46,25 @@ img {
     transition: color 300ms;
 
     &.open {
-		span {
-			background-color: transparent;
+        span {
+            background-color: transparent;
 
-			&::before {
-				top: 0px;
-				transform: rotateZ(225deg);
-			}
+            &::before {
+                top: 0px;
+                transform: rotateZ(225deg);
+            }
 
-			&::after {
-				top: -2px;
-				transform: rotateZ(135deg);
-			}
-		}
-	}
+            &::after {
+                top: -2px;
+                transform: rotateZ(135deg);
+            }
+        }
+
+        &:hover span,
+        &:focus span {
+            background-color: transparent;
+        }
+    }
 
     span {
         width: 25px;
@@ -66,6 +72,7 @@ img {
         background-color: #ffffff;
         display: block;
         position: relative;
+        transition: background-color 300ms;
 
         &::before,
         &::after {
@@ -75,7 +82,7 @@ img {
             width: 100%;
             background-color: #ffffff;
             display: inherit;
-            transition: transform 300ms, top 300ms;
+            transition: transform 300ms, top 300ms, background-color 300ms;
         }
 
         &::before {
@@ -84,6 +91,17 @@ img {
 
         &::after {
             top: 6px;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        color: rgb(197, 196, 196);
+
+        span,
+        span::before,
+        span::after {
+            background-color: rgb(197, 196, 196);
         }
     }
 }
