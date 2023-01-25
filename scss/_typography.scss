@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     font-family: "meno-banner", serif;
     text-transform: capitalize;
 }
@@ -11,11 +11,13 @@ h1 {
 h2 {
     font-size: 40px;
     color: var(--primary);
+    font-weight: 800;
 }
 
 h3 {
     font-size: 32px;
     color: var(--primary);
+    font-weight: 800;
 }
 
 p, label {
