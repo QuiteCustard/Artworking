@@ -1,6 +1,7 @@
 h1, h2, h3 {
     font-family: "meno-banner", serif;
     text-transform: capitalize;
+    font-weight: 800;
 }
 
 h1 {
@@ -11,13 +12,11 @@ h1 {
 h2 {
     font-size: 40px;
     color: var(--primary);
-    font-weight: 800;
 }
 
 h3 {
     font-size: 32px;
     color: var(--primary);
-    font-weight: 800;
 }
 
 p, label {
