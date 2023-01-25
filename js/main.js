@@ -14,3 +14,12 @@ const observer = new IntersectionObserver(entries => {
 })
 
 sections.forEach(section => observer.observe(section));
+
+
+const form = document.querySelector("#booking-form");
+
+form.addEventListener("submit", (event) => {
+    // Fake submit
+    event.preventDefault();
+    alert(`Submitted values: \n Name: ${form.querySelector("#name").value} \n Email: ${form.querySelector("#email").value} \n Phone number: ${form.querySelector("#phone").value}`)
+})
